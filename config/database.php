@@ -103,7 +103,7 @@ return [
             // 服务器地址
             'hostname' => Env::get('database.hostname', '192.168.1.18'),
             // 数据库名
-            'database' => Env::get('database.database', 'testbase'),
+            'database' => Env::get('database.database', 'loop_account'),
             // 用户名
             'username' => Env::get('database.username', 'root'),
             // 密码
@@ -115,7 +115,7 @@ return [
             // 数据库编码默认采用utf8
             'charset' => Env::get('database.charset', 'utf8'),
             // 数据库表前缀
-            'prefix' => Env::get('database.prefix', 't_'),
+            'prefix' => Env::get('database.prefix', 'account_'),
 
             // 数据库部署方式:0 集中式(单一服务器),1 分布式(主从服务器)
             'deploy' => 0,

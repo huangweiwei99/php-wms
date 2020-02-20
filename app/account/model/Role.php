@@ -14,7 +14,7 @@ class Role extends BaseModel
     protected $connection = 'account';
 
     // 设置当前模型对应的完整数据表名称
-    protected $table = 't_role';
+    protected $table = 'account_role';
 
     /**
      * 角色标题搜索器.

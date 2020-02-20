@@ -15,7 +15,7 @@ class User extends BaseModel
 {
     protected $connection = 'account';
     // 设置当前模型对应的完整数据表名称
-    protected $table = 't_user';
+    protected $table = 'account_user';
 
     /**
      * 密码字段修改器.

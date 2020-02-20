@@ -32,12 +32,16 @@ class Purchase extends BaseController
             'page' => 'integer',
             'limit' => 'integer', ]);
         $purchase = [];
+
         foreach ($this->app->wms_service->getPurchase($keywords, $page, $limit, $sort, $order)->hidden(['create_time', 'update_time', 'supplier_id']) as $p) {
             $p = $p->append(['supplier', 'content']);
 
             //供应商
             $supplier = $p->supplier;
-            $p['supplier'] = ['id' => $supplier->id, 'address' => $supplier->address, 'platform' => $supplier->platform];
+
+            if (!is_null($supplier)) {
+                $p['supplier'] = ['id' => $supplier->id, 'address' => $supplier->address, 'platform' => $supplier->platform];
+            }
 
             //采购的产品
             $products = [];

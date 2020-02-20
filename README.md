@@ -16,6 +16,19 @@ graph TD;
   wms-->订单模块;
 ```
 
+## 路由
+admin/wms/products?page=1&limit=10&sort=name&order=desc
+/admin/wms/products/2
+/admin/wms/product
+/admin/wms/products/2
+/admin/wms/products/97
+
+|  方法 | 路由 | 参数 |备注|
+| :---:|:------:|:----------:|:----------:|
+| GET   | admin/wms/products   | page=1&limit=10&sort=name&order=desc| -  `page` int 
+
+
+
 
 ## 安装
 

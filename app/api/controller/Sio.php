@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace app\admin\controller;
+namespace app\api\controller;
 
 use PHPSocketIO\SocketIO;
 use Workerman\Worker;

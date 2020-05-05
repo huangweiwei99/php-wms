@@ -11,7 +11,7 @@ class SFC
 
     protected static function soap_req_static($service, $req_data)
     {
-        $client = new SoapClient(self::$base_url_static);
+        $client = new SoapClient(self::$base_url_static, ['trace' => 1]);
         $auth = [
             'HeaderRequest' => Config::get('api.sfc_config_vson_mail'),
         ];
@@ -41,6 +41,7 @@ class SFC
                 $req_data = ['ratesRequestInfo' => $req_data];
                 $params = \array_merge($auth, $req_data);
                 $result = $client->getRates($params);
+                print_r($client->__getLastRequest()); die();
                 break;
             case 'addOrder':// 目的地与重量查询我们系统中的可用的运费规则
                 $req_data = ['addOrderRequestInfo' => $req_data];

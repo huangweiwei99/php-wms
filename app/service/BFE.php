@@ -6,7 +6,8 @@ use think\facade\Config;
 
 class BFE
 {
-    protected static $base_url = 'http://demo.chukou1.cn/v3/';
+    // protected static $base_url = 'http://demo.chukou1.cn/v3/';
+    protected static $base_url = 'https://openapi.chukou1.cn/v1/';
 
     protected function get_pricing_params_string($params, $name)
     {

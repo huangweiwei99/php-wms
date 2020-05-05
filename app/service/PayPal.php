@@ -2,7 +2,7 @@
 
 namespace app\service;
 
-use app\wms\facade\OrderFacade;
+use app\wms\facade\Order as OrderFacade;
 use PayPal\PayPalAPI\GetTransactionDetailsReq;
 use PayPal\PayPalAPI\GetTransactionDetailsRequestType;
 use PayPal\PayPalAPI\TransactionSearchReq;

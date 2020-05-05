@@ -13,8 +13,8 @@ class PPSyncTest extends Server
 
     public function onWorkerStart()
     {
-        $time_interval = 2.5;
-        Timer::add($time_interval, $this->testPP());
+        // $time_interval = 2.5;
+        // Timer::add($time_interval, $this->testPP());
     }
 
     protected function testPP()
@@ -22,7 +22,6 @@ class PPSyncTest extends Server
         Cache::store('redis')->delete('pp_number');
         for ($i = 0; $i < 10; ++$i) {
             sleep(1);
-
             dump('同步第'.($i + 1).'订单');
             Cache::store('redis')->set('pp_number', $i + 1, 0);
         }

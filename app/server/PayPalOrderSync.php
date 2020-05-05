@@ -12,8 +12,8 @@ class PayPalOrderSync extends Server
 
     public function onWorkerStart()
     {
-        // 每2.5秒执行一次
-        // $time_interval = 2.5;
+        //每2.5秒执行一次
+        $time_interval = 2.5;
 
         // Timer::add($time_interval, function () {
         //     echo "task run\n";
@@ -22,8 +22,8 @@ class PayPalOrderSync extends Server
         //  $endDate = '2017-12-21T00:00:00+0100';
         //  Timer::add($time_interval, APIServiceFacade::syncOrder($startDate, $endDate, 'paypal_config_vson_mail'));
         //  Timer::add($time_interval, APIServiceFacade::syncPayPalOrderWithWorkerman('paypal_config_vson_mail'));
-        // Timer::add($time_interval, PayPal::syncPayPalOrderWithWorkermanStatic('paypal_config_vson_mail'));
-        // echo 'socket开始...';
+        Timer::add($time_interval, PayPal::syncPayPalOrderWithWorkermanStatic('paypal_config_vson_mail'));
+        echo 'socket开始...';
     }
 
     public function onMessage($connection, $data)
